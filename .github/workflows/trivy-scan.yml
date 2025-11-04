@@ -1,0 +1,17 @@
+name: Trivy Scan
+
+on:
+  push:
+    branches:
+      - main
+      - fix/security-GabinCapelle
+
+jobs:
+  trivy-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Scan with Trivy
+        uses: aquasecurity/trivy-action@0.28.0
