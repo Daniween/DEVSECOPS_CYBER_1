@@ -2,7 +2,7 @@ name: Trivy Scan
 
 on:
   push:
-    branches: [main, fix/security-GabinCapelle]
+    branches: [main, fix/sercurity-GabinCapelle]
 
 jobs:
   trivy-scan:
