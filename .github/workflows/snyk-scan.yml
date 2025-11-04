@@ -1,27 +1,29 @@
-name: Scan de sécurité Snyk
+name: Snyk Scan
 
-on: [push]
+on:
+  push:
+    branches: ["main", "fix/**"]
+  pull_request:
 
 jobs:
-  snyk-scan:
+  snyk:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Récupération du code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Configuration de Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Installation des dépendances
+      - name: Install dependencies
         run: npm ci
 
-      - name: Exécution de Snyk pour vérifier les vulnérabilités
+      - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         continue-on-error: false
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --severity-threshold=high
+          args: --severity-threshold=medium
