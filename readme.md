@@ -132,6 +132,37 @@ J’ai ouvert une PR / fourni le lien vers mon fork + branche au professeur.
 
 ---
 
+## 7 🏷️ Section — Badges de validité & Workflow CI
+
+Ajoutez à votre README.md vos badges de validation et la description de votre workflow CI qui exécute les scans.
+
+1) Badges🚦
+
+Remplacez OWNER et REPO par votre nom d’utilisateur/organisation et le nom du repo.
+Remplacez workflow-file.yml par le nom exact du workflow dans .github/workflows/.
+
+Badge GitHub Actions (Trivy)
+```
+![Trivy - Security Scan](https://github.com/OWNER/REPO/actions/workflows/trivy-scan.yml/badge.svg)
+```
+
+Badge GitHub Actions (Snyk)
+```
+![Snyk - Security Scan](https://github.com/OWNER/REPO/actions/workflows/snyk-scan.yml/badge.svg)
+```
+
+Badge GitHub Actions (Gitleaks)
+```
+![Gitleaks - Secret Scan](https://github.com/OWNER/REPO/actions/workflows/gitleaks.yml/badge.svg)
+```
+
+(Optionnel) Snyk public badge (si vous avez un projet publié sur Snyk)
+```
+![Snyk Vulnerability Score](https://snyk.io/test/github/OWNER/REPO/badge.svg)
+```
+
+---
+
 ## 🌱 8. Règles importantes et bonnes pratiques
 
 Ne publiez jamais de vraies clés ou secrets. Ici les clés sont factices.
