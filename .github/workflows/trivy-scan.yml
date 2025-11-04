@@ -5,6 +5,7 @@ on:
   push:
     branches: [main, fix/sercurity-Touitou-Yaacov]
 
+    
 jobs:
   trivy-scan:
     runs-on: ubuntu-latest

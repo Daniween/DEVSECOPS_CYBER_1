@@ -6,6 +6,7 @@ on:
     branches: [main, fix/sercurity-Touitou-Yaacov]
 
 
+    
 jobs:
   snyk-scan:
     runs-on: ubuntu-latest

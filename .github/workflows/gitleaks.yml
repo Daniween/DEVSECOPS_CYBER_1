@@ -5,6 +5,7 @@ on:
   push:
     branches: [main, fix/sercurity-Touitou-Yaacov]
 
+    
 jobs:
   gitleaks-scan:
     runs-on: ubuntu-latest
