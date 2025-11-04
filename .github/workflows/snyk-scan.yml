@@ -2,28 +2,20 @@ name: Snyk Scan
 
 on:
   push:
-    branches: ["main", "fix/**"]
+    branches: ["main", "fix/"]
   pull_request:
 
 jobs:
   snyk:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Run Snyk test
+        uses: snyk/actions@master
         with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
-        continue-on-error: false
+          command: test --all-projects --severity-threshold=medium
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --severity-threshold=medium
+
+          
