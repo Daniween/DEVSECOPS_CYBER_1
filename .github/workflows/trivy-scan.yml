@@ -8,13 +8,14 @@ jobs:
     
     steps:
       - name: Récupération du code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Exécution du scan de vulnérabilités Trivy
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@0.32.0
         with:
           scan-type: 'fs'
           scan-ref: '.'
           format: 'table'
           exit-code: '1'
           severity: 'CRITICAL,HIGH'
+          ignore-unfixed: false
