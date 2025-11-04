@@ -2,9 +2,8 @@ name: Snyk Scan
 
 on:
   push:
-    branches:
-      - main
-      - fix/security-GabinCapelle
+    branches: [main, fix/security-GabinCapelle]
+
 
 jobs:
   snyk-scan:
