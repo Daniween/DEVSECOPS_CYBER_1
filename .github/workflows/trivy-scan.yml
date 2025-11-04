@@ -1,0 +1,29 @@
+name: Trivy Security Scan
+
+on:
+  push:
+    branches: [main, 'fix/security-*']
+  pull_request:
+
+jobs:
+  trivy-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Trivy
+        run: |
+          sudo apt-get update && sudo apt-get install -y wget
+          wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_$(uname -s)_$(uname -m).tar.gz
+          tar zxvf trivy_$(uname -s)_$(uname -m).tar.gz
+          sudo mv trivy /usr/local/bin/
+
+      - name: Run Trivy File System Scan
+        run: trivy fs --format table . > ./evidence/trivy_report.txt || true
+
+      - name: Upload Trivy report
+        uses: actions/upload-artifact@v3
+        with:
+          name: trivy-report
+          path: ./evidence/trivy_report.txt
