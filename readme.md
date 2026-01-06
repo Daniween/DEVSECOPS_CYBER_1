@@ -26,8 +26,8 @@ Forkez ce dépôt sur votre compte GitHub.
 Clonez votre fork en local :
 
 ```
-git clone git@github.com:<votre-username>/BTS_DEVSECOPS_CYBER_1.git
-cd BTS_DEVSECOPS_CYBER_1
+git clone git@github.com:<votre-username>/DEVSECOPS_CYBER_1.git
+cd DEVSECOPS_CYBER_1
 ```
 
 Créez une branche pour votre travail :
