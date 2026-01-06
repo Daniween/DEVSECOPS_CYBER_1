@@ -1,4 +1,4 @@
-# 🕵️‍♀️ TP DevSecOps : Projet Node.js vulnérable
+# TP DevSecOps : Projet Node.js vulnérable
 
 ## Bienvenue !
 
@@ -7,7 +7,7 @@ Important : le dépôt contient des secrets factices (fichiers .env, private_key
 
 ---
 
-## 🎯 Objectifs du TP
+## Objectifs du TP
 
 Identifier toutes les vulnérabilités présentes (dépendances, fuites de secrets, mauvaises pratiques dans le code, etc.).
 
@@ -19,7 +19,7 @@ Justifier vos choix et fournir les preuves (logs / captures) avant / après corr
 
 ---
 
-## 🧑‍💻 1. Démarrage - fork / clone / run
+## 1. Démarrage - fork / clone / run
 
 Forkez ce dépôt sur votre compte GitHub.
 
@@ -52,7 +52,7 @@ Puis ouvrir http://localhost:3000
 
 ---
 
-## 🔍 2. Scans (locaux et CI)
+## 2. Scans (locaux et CI)
 
 Vous devrez exécuter les scans localement et vérifier les runs GitHub Actions sur vos PRs.
 
@@ -62,7 +62,7 @@ Les workflows GitHub Actions (Trivy / Snyk / Gitleaks) sont configurés pour s�
 
 ---
 
-## 🪲 3. Consignes d’exercice
+## 3. Consignes d’exercice
 
 Scanner tout le projet et lister tous les findings : vulnérabilités SCA, vulnérabilités de code, secrets committés, patterns dangereux.
 
@@ -76,7 +76,7 @@ Documenter vos travaux (voir section livrables).
 
 ---
 
-## 🛠️ 4. Livrables obligatoires (à déposer dans votre fork / PR)
+## 4. Livrables obligatoires (à déposer dans votre fork / PR)
 
 Votre dépôt rendu doit contenir au minimum :
 
@@ -105,7 +105,7 @@ Votre dépôt rendu doit contenir au minimum :
 
 ---
 
-## 🧠 5. Format et contenu du CVE_TABLE.md
+## Format et contenu du CVE_TABLE.md
 
 Créez CVE_TABLE.md avec un tableau clair. Exemple (à compléter par vos soins) :
 
@@ -116,7 +116,7 @@ Créez CVE_TABLE.md avec un tableau clair. Exemple (à compléter par vos soins)
 
 Chaque ligne doit être renseignée.
 
-## 🗂️ 6. Checklist avant soumission
+## 6. Checklist avant soumission
 
 J’ai forké le dépôt et créé une branche pour mes corrections.
 
@@ -132,11 +132,11 @@ J’ai ouvert une PR / fourni le lien vers mon fork + branche au professeur.
 
 ---
 
-## 7 🏷️ Section — Badges de validité & Workflow CI
+## 7 Section - Badges de validité & Workflow CI
 
 Ajoutez à votre README.md vos badges de validation et la description de votre workflow CI qui exécute les scans.
 
-1) Badges🚦
+1) Badges
 
 Remplacez OWNER et REPO par votre nom d’utilisateur/organisation et le nom du repo.
 Remplacez workflow-file.yml par le nom exact du workflow dans .github/workflows/.
@@ -163,7 +163,7 @@ Badge GitHub Actions (Gitleaks)
 
 ---
 
-## 🌱 8. Règles importantes et bonnes pratiques
+## 8. Règles importantes et bonnes pratiques
 
 Ne publiez jamais de vraies clés ou secrets. Ici les clés sont factices.
 
