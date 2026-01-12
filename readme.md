@@ -144,6 +144,8 @@ J’ai exécuté les scans locaux et les ai sauvegardés dans ./evidence/.
 CVE_TABLE.md est complet et sourcé.
 
 J’ai ouvert une PR / fourni le lien vers mon fork + branche au professeur.
+J’ai ouvert une PR avec tous mes correctifs : [Voir la PR](https://github.com/Daniween/DEVSECOPS_CYBER_1/pull/8)
+
 
 ---
 
