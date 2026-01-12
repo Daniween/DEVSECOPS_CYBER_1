@@ -2,11 +2,9 @@
 
 ## ✅ Badges de sécurité
 
-![Trivy - Security Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/trivy-scan.yml/badge.svg)  
-![Snyk - Security Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/snyk-scan.yml/badge.svg)  
-![Gitleaks - Secret Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/gitleaks.yml/badge.svg)
-
----
+![Trivy Security Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/trivy-scan.yml/badge.svg)
+![Snyk Security Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/snyk-scan.yml/badge.svg)
+![Gitleaks Secret Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/gitleaks.yml/badge.svg)
 
 
 ## Bienvenue !
@@ -185,3 +183,5 @@ Travaillez en branches et faites des commits lisibles.
 ---
 
 ### 🎖️ Bon travail - soyez curieux, méthodiques et rigoureux. Montrez-moi vos talents d’auditeur de sécurité ! 🛡️
+
+
