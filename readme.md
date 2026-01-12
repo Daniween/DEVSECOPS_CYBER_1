@@ -1,5 +1,20 @@
 # TP DevSecOps : Projet Node.js vulnérable
 
+## ✅ Badges de sécurité
+
+![Trivy - Security Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/trivy-scan.yml/badge.svg)
+![Snyk - Security Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/snyk-scan.yml/badge.svg)
+![Gitleaks - Secret Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/gitleaks.yml/badge.svg)
+
+## 🔒 CI Sécurité
+
+Les workflows CI exécutent automatiquement les scans de sécurité :
+- **Trivy** pour les dépendances et fichiers système
+- **Snyk** pour les vulnérabilités connues
+- **Gitleaks** pour les secrets
+
+Les badges ci-dessus montrent l’état des scans.
+
 ## Bienvenue !
 
 Cet exercice vous place dans la peau d’une équipe DevSecOps : votre mission est de scanner, détecter, corriger et documenter les vulnérabilités d’un petit projet Node.js volontairement vulnérable.
@@ -176,3 +191,5 @@ Travaillez en branches et faites des commits lisibles.
 ---
 
 ### 🎖️ Bon travail - soyez curieux, méthodiques et rigoureux. Montrez-moi vos talents d’auditeur de sécurité ! 🛡️
+
+
