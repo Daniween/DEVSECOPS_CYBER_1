@@ -2,3 +2,5 @@ node_modules
 dist
 private-node.pem
 .env
+trivy.exe
+trivy.zip
