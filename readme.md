@@ -3,7 +3,9 @@
 ## ✅ Badges de sécurité
 
 ![Trivy - Security Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/trivy-scan.yml/badge.svg)
+
 ![Gitleaks - Secret Scan](https://github.com/levanawizman/DEVSECOPS_CYBER_1/actions/workflows/gitleaks.yml/badge.svg)
+
 
 ## 🔒 CI Sécurité
 
