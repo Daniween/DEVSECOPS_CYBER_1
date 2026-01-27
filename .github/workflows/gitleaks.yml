@@ -8,13 +8,14 @@ jobs:
   gitleaks-scan:
     name: Gitleaks Secret Scan
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # IMPORTANT : permet de scanner tout l'historique, pas juste le dernier commit
 
       - name: Run Gitleaks
         uses: zricethezav/gitleaks-action@v2
         with:
           verbose: true
-          exit-code: 1
+          exit-code: 1 # Force l'échec du pipeline si un secret est trouvé
