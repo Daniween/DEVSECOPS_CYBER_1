@@ -2,12 +2,11 @@ name: Gitleaks Secret Scan
 
 on:
   push:
-    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "main", "master" ]
 
 jobs:
   gitleaks-scan:
+    name: Gitleaks Secret Scan
     runs-on: ubuntu-latest
 
     steps:
@@ -17,6 +16,5 @@ jobs:
       - name: Run Gitleaks
         uses: zricethezav/gitleaks-action@v2
         with:
-          config-path: .gitleaks.toml
           verbose: true
           exit-code: 1
