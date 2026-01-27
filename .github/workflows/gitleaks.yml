@@ -12,10 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # IMPORTANT : permet de scanner tout l'historique, pas juste le dernier commit
+          fetch-depth: 0 
 
       - name: Run Gitleaks
-        uses: zricethezav/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          verbose: true
-          exit-code: 1 # Force l'échec du pipeline si un secret est trouvé
+          args: detect --source . --verbose
