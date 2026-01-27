@@ -15,8 +15,9 @@ jobs:
           fetch-depth: 0 
 
       - name: Run Gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: zricethezav/gitleaks-action@v2
         with:
-          args: detect --source . --verbose
+          # On force le scan du dossier actuel sans passer par l'historique Git
+          # pour être sûr qu'il détecte le fichier .pem présent
+          args: detect --source . --verbose --no-git
+          exit-code: 1
