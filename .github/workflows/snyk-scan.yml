@@ -1,29 +1,16 @@
-name: Snyk Security Scan
+name: Snyk - Security Scan
 
-on:
-  push:
-  pull_request:
+on: [push, pull_request]
 
 jobs:
-  snyk-scan:
-    name: Snyk SCA Scan
+  snyk:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
+      - uses: actions/checkout@v4
 
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          SNYK_TOKEN: ${{ secrets.SNYK }} # Utilise ton secret nommé SNYK
         with:
-          args: test --severity-threshold=high
+          args: --severity-threshold=high # Ne bloque que pour le High/Critical
