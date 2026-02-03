@@ -1,0 +1,24 @@
+name: Snyk Security Scan
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  snyk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Exemple générique (Node/Python/Java/Go...).
+      # Snyk détecte souvent le langage automatiquement.
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: test
+          args: --severity-threshold=high
+            # Pour faire échouer le build si vulnérabilités de haute sévérité ou critique sont trouvées
