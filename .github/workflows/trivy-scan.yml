@@ -2,9 +2,9 @@ name: Trivy File System Scan
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "**" ]  # Les guillemets avec ** signifient : TOUTES les branches
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "**" ]
 
 jobs:
   trivy:
