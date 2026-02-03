@@ -1,0 +1,26 @@
+name: Trivy File System Scan
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  trivy:
+    name: Trivy Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner (FS mode)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          hide-progress: false
+          format: 'table'
+          exit-code: '1'        # 1 pour faire échouer le build si vulnérabilité
+          ignore-unfixed: true  # Ignorer les vulnérabilités sans correctif
+          severity: 'CRITICAL,HIGH'
