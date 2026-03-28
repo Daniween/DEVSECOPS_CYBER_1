@@ -1,2 +1,8 @@
 node_modules
 dist
+*.pem
+*.pem.pub
+*.key
+*.env
+.env.*
+private-node.pem.pub

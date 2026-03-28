@@ -6,7 +6,7 @@ app.use(express.json());
 app.use('/user', userRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Vuln Node Project - demo');
+  res.send('TEST SVJ');
 });
 
 const PORT = process.env.PORT || 3000;
