@@ -1,0 +1,18 @@
+run-name: Snyk Scan
+name: Snyk Scan
+
+on:
+  push:
+    branches: [main, fix/security-Touitou-Yaacov]
+
+jobs:
+  snyk-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Scan libraries with Snyk
+        uses: snyk/actions/python@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

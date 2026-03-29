@@ -1,0 +1,23 @@
+run-name: Gitleaks Scan
+name: Gitleaks Scan
+
+on:
+  push:
+    branches: [main, fix/security-Touitou-Yaacov]
+
+
+jobs:
+  gitleaks-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Scan secrets with GitLeaks
+        run: |
+          # Install gitleaks
+          wget https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz
+          tar -xzf gitleaks_8.18.4_linux_x64.tar.gz
+          chmod +x gitleaks
+          # Run gitleaks scan
+          ./gitleaks detect --source . --verbose

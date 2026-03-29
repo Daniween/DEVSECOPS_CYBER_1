@@ -1,2 +1,7 @@
 node_modules
 dist
+.env
+private-node.pem
+private-node.pem.pub
+preuve/gitleaks_report.json
+preuve/*.json
