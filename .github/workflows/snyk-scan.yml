@@ -1,0 +1,32 @@
+name: Snyk Scan
+on:
+  push:
+    branches:
+      - fix/security-eden
+  pull_request:
+    branches:
+      - fix/security-eden
+
+jobs: 
+  snyk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' 
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Snyk test
+        uses: snyk/actions/node@master
+        with:
+          command: test
+        env:
+          SNYK_TOKEN: ${{ secrets.snyk }}

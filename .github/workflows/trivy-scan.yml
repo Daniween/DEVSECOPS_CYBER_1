@@ -1,0 +1,23 @@
+name: Trivy Security Scan
+
+on:
+  push:
+    branches:
+      - fix/security-eden
+  pull_request:
+    branches:
+      - fix/security-eden
+
+jobs:
+  trivy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          severity: CRITICAL,HIGH
